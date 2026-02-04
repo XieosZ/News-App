@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News in Tamil Nadu</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: calc(100% - 80px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#newsResult {
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Find News in Tamil Nadu</h1>
+        <input type="text" id="districtInput" placeholder="Enter District">
+        <button onclick="searchNews()">Search</button>
+        <div id="newsResult"></div>
+    </div>
+    <script>
+        function searchNews() {
+    var district = document.getElementById("districtInput").value;
+    var newsData ={
+        "news_articles": [
+            {
+                "name": "Heavy Rain Hits Chennai",
+                "district": "Chennai",
+                "description": "Chennai experiences heavy rainfall, causing waterlogging in several areas.",
+                "author": "S. Kumar"
+            },
+          {
+      "name": "Cyclone Warning Issued for Coastal Areas",
+      "district": "Nagapattinam",
+      "description": "Meteorological department issues cyclone warning for Nagapattinam and neighboring coastal areas.",
+      "author": "R. Swaminathan"
+    },
+    {
+      "name": "New Industrial Park Proposed in Coimbatore",
+      "district": "Coimbatore",
+      "description": "Government announces plans to establish a new industrial park in Coimbatore district to boost economic growth.",
+      "author": "V. Rajendran"
+    },
+    {
+      "name": "Road Accident in Madurai Claims 3 Lives",
+      "district": "Madurai",
+      "description": "Tragic road accident in Madurai results in the loss of 3 lives and several injuries.",
+      "author": "K. Sundaram"
+    },
+    {
+      "name": "Protests Erupt in Salem Against Water Scarcity",
+      "district": "Salem",
+      "description": "Residents stage protests in Salem demanding immediate action to address the water scarcity issue.",
+      "author": "G. Prakash"
+    },
+    {
+      "name": "New Educational Initiatives Launched in Tiruchirappalli",
+      "district": "Tiruchirappalli",
+      "description": "Government announces the launch of new educational initiatives in Tiruchirappalli district to improve student performance.",
+      "author": "M. Ramesh"
+    },
+    {
+      "name": "Power Outage Hits Thanjavur District",
+      "district": "Thanjavur",
+      "description": "Thanjavur district faces prolonged power outage due to technical issues, inconveniencing residents.",
+      "author": "S. Shankar"
+    },
+    {
+      "name": "Fire Breaks Out in Tirunelveli Market",
+      "district": "Tirunelveli",
+      "description": "Major fire incident reported in Tirunelveli market, causing significant damage to property.",
+      "author": "N. Krishnan"
+    },
+    {
+      "name": "Health Camp Organized in Vellore",
+      "district": "Vellore",
+      "description": "Community health camp organized in Vellore district to provide free medical checkups and treatments.",
+      "author": "A. Nandini"
+    },
+    {
+      "name": "Arrest Made in Dindigul Robbery Case",
+      "district": "Dindigul",
+      "description": "Police arrest suspect involved in recent robbery case reported in Dindigul district.",
+      "author": "R. Manikandan"
+    },
+    {
+      "name": "New Horticulture Project Launched in Tiruppur",
+      "district": "Tiruppur",
+      "description": "Government inaugurates new horticulture project in Tiruppur district to promote agricultural development.",
+      "author": "K. Gopal"
+    },
+    {
+      "name": "Illegal Sand Mining Raids Conducted in Cuddalore",
+      "district": "Cuddalore",
+      "description": "Authorities conduct raids to crackdown on illegal sand mining activities in Cuddalore district.",
+      "author": "P. Kumaravel"
+    },
+    {
+      "name": "Tourism Boost in Kanyakumari District",
+      "district": "Kanyakumari",
+      "description": "Kanyakumari district witnesses a surge in tourism with new initiatives to promote local attractions.",
+      "author": "S. Xavier"
+    },
+    {
+      "name": "Flood Relief Efforts Continue in Tiruvallur",
+      "district": "Tiruvallur",
+      "description": "Relief and rehabilitation efforts ongoing in Tiruvallur district following recent floods.",
+      "author": "V. Arun"
+    },
+    {
+      "name": "Medical Camp Held in Erode District",
+      "district": "Erode",
+      "description": "Volunteer organizations organize a medical camp in Erode district to provide healthcare services to the underprivileged.",
+      "author": "R. Mohan"
+    }
+            // Add the rest of the news articles here
+        ]
+    };
+
+    var newsResult = document.getElementById("newsResult");
+    newsResult.innerHTML = "";
+
+    for (var i = 0; i < newsData.news_articles.length; i++) {
+        var article = newsData.news_articles[i];
+        if (article.district.toLowerCase() === district.toLowerCase()) {
+            var newsItem = document.createElement("div");
+            newsItem.classList.add("news-item");
+            newsItem.innerHTML = "<h3>" + article.name + "</h3><p>" + article.description + "</p><p><strong>Author:</strong> " + article.author + "</p>";
+            newsResult.appendChild(newsItem);
+        }
+    }
+
+    if (newsResult.innerHTML === "") {
+        newsResult.innerHTML = "<p>No news found for the district: " + district + "</p>";
+    }
+}
+
+    </script>
+</body>
+</html>
